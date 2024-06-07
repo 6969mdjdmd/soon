@@ -25,16 +25,3 @@ sudo ./apps/gaganode/gaganode config set --token=hkvpolkoiytptsvy3a4ff04b8f24413
 
 # Restart the apphub service
 sudo ./apphub restart
-
-# Wait for 1 minute
-sleep 60
-
-
-wget 'https://staticassets.meson.network/public/meson_cdn/v3.1.20/meson_cdn-linux-amd64.tar.gz' && tar -zxf meson_cdn-linux-amd64.tar.gz && rm -f meson_cdn-linux-amd64.tar.gz && cd ./meson_cdn-linux-amd64 && sudo ./service install meson_cdn
-
-
-cd ./meson_cdn-linux-amd64
-sudo ./meson_cdn config set --token=flpzbbwkogddyofpab335c975434d950 --https_port=443 --cache.size=30
-
-
-sudo ./service start meson_cdn
